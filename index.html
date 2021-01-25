@@ -4,58 +4,123 @@
       <meta charset="UTF-8">
       <title>Welcome Page</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="style.css">
     </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div>
-    
-      <nav class="navbar">
-      <ul>
-        <li font-size: >
-          <a href="index.html">Home Page</a>
-        </li>
-        <li>
-          <div>
-
-            <div class="dropdown show">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" 
-                  id="dropdownMenuLink" data-toggle="dropdown" 
-                  aria-haspopup="true" aria-expanded="false" >
-                Plots
-              </a>
-            
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="Plot1.html">Plot 1</a>
-                <a class="dropdown-item" href="Plot2.html">Plot 2</a>
-                <a class="dropdown-item" href="Plot3.html">Plot 3</a>
-                <a class="dropdown-item" href="Plot4.html">Plot 4</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" style = "padding: 5px; background-color: mediumseagreen ;color: white;">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto" style ="font-size:x-small; font-weight: bolder;">
+            <li class="nav-item" >
+              <a class="nav-link" style = "width: fit-content; height: fit-content;" href="ComparisonPage.html">Comparison</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link style = "width: fit-content; height: fit-content;"dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Plots</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Plot1.html">v Temperature</a>
+                <a class="dropdown-item" href="Plot2.html">v Humidity</a>
+                <a class="dropdown-item" href="Plot3.html">v Cloudiness</a>
+                <a class="dropdown-item" href="Plot4.html">v Windiness</a>
               </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a href="ComparisonPage.html">Comparison Page</a>
-        </li>
-        <li>
-          <a href="DataPage.html">Data Page</a>
-        </li>
-      </ul>
-    </nav>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"style = "width: fit-content; height: fit-content;" href="DataPage.html">Data</a>
+            </li> 
+          </ul>
+        </div>
+      </nav>
   
   </div>
     <header class="header">
-
-      <h1>Welcome</h1>
     </header>
-<!--
-An explanation of the project.
-Links to each visualizations page. 
-There should be a sidebar containing preview images of each plot, 
-and clicking an image should take the user to that visualization.
--->
-<a href="images/NorthCloudVLat.png"  target="_blank">
-  <img src="images/NorthCloudVLat.png" height=50 width=50></a>
+
+
+    <div class="card-body">
+      <div class="row"> 
+        <div class="col-md-8">
+          <div class="col-md-12" style = "background-color: white;">
+              <div class="row">
+                <h5 class="card-title" style="color: mediumseagreen;">Summary: Latitude vs X</h5> 
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img
+                  src="images/NorthCloudVLat.png"
+                  alt="Northern Hemisphere clouds"
+                  class="img-fluid"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p>
+                      The purpose of this project was to analyze how weather changes 
+                      as you get closer to the equator. To accomplish this analysis, we
+                      first pulled data from the OpenWeatherMap API to assemble
+                      a dataset on over 500 cities.
+                    </p>
+                    <p>  
+                      After assembling the Dataset, we used Matplotlib to plot various
+                      aspects of the weather vs latitude. Factors we looked at included:
+                      temperature, wind speed, and humidity. This site provides the source
+                      data and visualizations created as part of the analysis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+            <div class="col-md-4" >
+              <div class="col-md-12" style = "background-color: white;">
+                <h5 class="card-title" style = "color:mediumseagreen">Visualizations</h5> 
+                <div class="row row-cols-2">
+                  <div class= "col">
+                    <div class="gallery">
+                      <a target="_blank" href="images/HumidityVLat.png">
+                        <img src="images/HumidityVLat.png" alt="southTempVLat" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                  <div class= "col">
+                    <div class="gallery">
+                      <a target="_blank" href="images/TempVLat.png">
+                        <img src="images/TempVLat.png" alt="southTempVLat" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-cols-2">
+                  <div class= "col">
+                    <div class="gallery">
+                      <a target="_blank" href="images/WindVLat.png">
+                        <img src="images/WindVLat.png" alt="southTempVLat" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                  <div class= "col">
+                    <div class="gallery">
+                      <a target="_blank" href="images/CloudVLat.png">
+                        <img src="images/CloudVLat.png" alt="southTempVLat" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
